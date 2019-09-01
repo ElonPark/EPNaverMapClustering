@@ -1,0 +1,6 @@
+framework module EPNaverMapClustering {
+  umbrella header "EPNaverMapClustering-umbrella.h"
+
+  export *
+  module * { export * }
+}
