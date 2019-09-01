@@ -1,0 +1,905 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 075089DA4D83E6A425CB6F028FDEEA64 /* Build configuration list for PBXAggregateTarget "NMapsMap" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = NMapsMap;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		68DF83D271329868F5995491F546FF2A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7FF387CE7782B02BDBEA8010C69E7 /* ReplaceMe.swift */; };
+		6904E7AAF3A7738547EA2DA240EA7871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		775ED26A3E3DF45E82D6DA653480C061 /* Pods-EPNaverMapClustering_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92962C3CB918BE53C7CB24BA1724A361 /* Pods-EPNaverMapClustering_Tests-dummy.m */; };
+		7904331D4C30145F25FBFE7431CDD0C5 /* QuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BDA90CFF0005E9470F516E758DCA69 /* QuadTree.swift */; };
+		9E6A0B96D6C9D7DE74EEF2601AE4B454 /* MarkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA25D7C2C48F5FD12196979ACB59097 /* MarkerDelegate.swift */; };
+		C004B623EAD0DA5F78DCDF5C2F09923F /* Pods-EPNaverMapClustering_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D49091BA8D77AA12C6433F1DF2473AD /* Pods-EPNaverMapClustering_Example-dummy.m */; };
+		CD79AB422569C57A886202D211508326 /* EPNaverMapClustering-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CF917CC927264E8EC21B7E7894D04B /* EPNaverMapClustering-dummy.m */; };
+		CE525C856929D17D54BC1DFA5B26B13F /* Pods-EPNaverMapClustering_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6B022E8F2FCE1440ACF753300A8B542 /* Pods-EPNaverMapClustering_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0B7DC48E00726B10844976979E22009 /* Pods-EPNaverMapClustering_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B7AE4992EFA14CE97D39382983F5A89 /* Pods-EPNaverMapClustering_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF865FDBEEFF2E3DD631A8A122BAD3C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E84ED41B987501835939AC6239646990 /* QuadTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FF52801323CBB3B22FED2A173FDE8 /* QuadTreeNode.swift */; };
+		EC737D2F9675DEB2E49D6BE510537E23 /* EPNaverMapClustering-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4208D8A8E7212C43E85E2F4DBA95FC1 /* EPNaverMapClustering-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2C59EBABF947461D6F88D6B4B1D4F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30CCBBABF5FD7B4F9FBE593B20C7B3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
+			remoteInfo = NMapsMap;
+		};
+		554C79698E3F22ABA1A898AE4BEABF4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C812D44BA60943132C188E0B0CC88482;
+			remoteInfo = "Pods-EPNaverMapClustering_Example";
+		};
+		B1457347FDE5BA207C94604251F9111F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
+			remoteInfo = NMapsMap;
+		};
+		D7CCD6E03B5DA23B02C067AFD04F2F35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B854A8008DE7DD4F671B7F484044514B;
+			remoteInfo = EPNaverMapClustering;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06AED9C8B4E4B7546AB09FFC56C0AE8D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		07A8E7CCC9E5CC6E14FDC98660F7200A /* Pods-EPNaverMapClustering_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPNaverMapClustering_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		088CA4826D8843565437DD4A8DAEA2FF /* Pods-EPNaverMapClustering_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPNaverMapClustering_Example.release.xcconfig"; sourceTree = "<group>"; };
+		13C0E779B930B78800319CDB32BC5C3F /* Pods-EPNaverMapClustering_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPNaverMapClustering_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1A403508B3ADB60DDFE1FAAC6006394A /* EPNaverMapClustering.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EPNaverMapClustering.modulemap; sourceTree = "<group>"; };
+		1C2ADFB556AF73A96497C9E28C974EF8 /* Pods-EPNaverMapClustering_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPNaverMapClustering_Example-Info.plist"; sourceTree = "<group>"; };
+		1DCAF7FC2C8C3B7E43A7B2290E7B183A /* NMapsMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapsMap.framework; path = framework/NMapsMap.framework; sourceTree = "<group>"; };
+		25F72C478A8F0153EC511E27EA3E0D17 /* EPNaverMapClustering-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPNaverMapClustering-prefix.pch"; sourceTree = "<group>"; };
+		2D7ECEC9507DB3BD357795E798F01B7B /* Pods-EPNaverMapClustering_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EPNaverMapClustering_Example.modulemap"; sourceTree = "<group>"; };
+		310A91FFAE75583544884645AA0DAFCF /* Pods-EPNaverMapClustering_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPNaverMapClustering_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		31BDA90CFF0005E9470F516E758DCA69 /* QuadTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuadTree.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		349E1CF94FBD3F4C45E923D9F5EF6856 /* Pods_EPNaverMapClustering_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPNaverMapClustering_Tests.framework; path = "Pods-EPNaverMapClustering_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36009F137528CA76FE87745CDD5ADB3C /* NMapsMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.xcconfig; sourceTree = "<group>"; };
+		3793C46506CE6313AFB98C4EAE621F16 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		37A7FF387CE7782B02BDBEA8010C69E7 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EPNaverMapClustering/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		3BBDC37EDFF07D1AA5770570A310232B /* Pods-EPNaverMapClustering_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPNaverMapClustering_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C13ACF6D3CFB2B6DD06B8A11B7C3C88 /* EPNaverMapClustering.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPNaverMapClustering.xcconfig; sourceTree = "<group>"; };
+		463033527A839840F8CAF944D727A733 /* Pods-EPNaverMapClustering_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EPNaverMapClustering_Tests.modulemap"; sourceTree = "<group>"; };
+		49B947ADBD15FFC24C40ED5611F37FAF /* Pods_EPNaverMapClustering_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPNaverMapClustering_Example.framework; path = "Pods-EPNaverMapClustering_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7AE4992EFA14CE97D39382983F5A89 /* Pods-EPNaverMapClustering_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPNaverMapClustering_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4C0A65895230EACDF2637912862040BE /* Pods-EPNaverMapClustering_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPNaverMapClustering_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		501431FE5397613487C3794EDBC22D4B /* EPNaverMapClustering-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EPNaverMapClustering-Info.plist"; sourceTree = "<group>"; };
+		7D49091BA8D77AA12C6433F1DF2473AD /* Pods-EPNaverMapClustering_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPNaverMapClustering_Example-dummy.m"; sourceTree = "<group>"; };
+		86679475449C1E4C140C080F6A3B5730 /* Pods-EPNaverMapClustering_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPNaverMapClustering_Tests-Info.plist"; sourceTree = "<group>"; };
+		92962C3CB918BE53C7CB24BA1724A361 /* Pods-EPNaverMapClustering_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPNaverMapClustering_Tests-dummy.m"; sourceTree = "<group>"; };
+		97F1FA8A7E33725FBE62B0FA22909B61 /* EPNaverMapClustering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EPNaverMapClustering.framework; path = EPNaverMapClustering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98CF917CC927264E8EC21B7E7894D04B /* EPNaverMapClustering-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPNaverMapClustering-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4208D8A8E7212C43E85E2F4DBA95FC1 /* EPNaverMapClustering-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPNaverMapClustering-umbrella.h"; sourceTree = "<group>"; };
+		A6B022E8F2FCE1440ACF753300A8B542 /* Pods-EPNaverMapClustering_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPNaverMapClustering_Example-umbrella.h"; sourceTree = "<group>"; };
+		AFA25D7C2C48F5FD12196979ACB59097 /* MarkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkerDelegate.swift; sourceTree = "<group>"; };
+		CC0FF52801323CBB3B22FED2A173FDE8 /* QuadTreeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuadTreeNode.swift; sourceTree = "<group>"; };
+		CCC8AF6EDB79E4F7FA939E7A8B445BF3 /* EPNaverMapClustering.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EPNaverMapClustering.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E4FA6ED1D124B24AFA2E020EA18DFA04 /* Pods-EPNaverMapClustering_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPNaverMapClustering_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB53D5853A271FA7E1CA6C8539CEC02 /* Pods-EPNaverMapClustering_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPNaverMapClustering_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F0E72CE1DF303E81DC19CC4831F7580B /* Pods-EPNaverMapClustering_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPNaverMapClustering_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		451E0AFFD75F13B40DD5C371770CFC99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6904E7AAF3A7738547EA2DA240EA7871 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDDC707624B3B37194BA4E2B7CCEB1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF865FDBEEFF2E3DD631A8A122BAD3C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8066A6FB5151DE43143A03B1DA6E8321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C59EBABF947461D6F88D6B4B1D4F6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2109F870A0EB757C0EF01197881E2606 /* EPNaverMapClustering */ = {
+			isa = PBXGroup;
+			children = (
+				37A7FF387CE7782B02BDBEA8010C69E7 /* ReplaceMe.swift */,
+				AE1AD4330775F8D88FB5D0D7E4F3F816 /* Pod */,
+				F453B11083BFE07B8DCDFC83FE4C80E9 /* QuadTree */,
+				FCC5F73F08D783888CF88A482224E272 /* Support Files */,
+			);
+			name = EPNaverMapClustering;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5041E2715C1F8671BB01BD3AA6AB70D3 /* Pods-EPNaverMapClustering_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				463033527A839840F8CAF944D727A733 /* Pods-EPNaverMapClustering_Tests.modulemap */,
+				F0E72CE1DF303E81DC19CC4831F7580B /* Pods-EPNaverMapClustering_Tests-acknowledgements.markdown */,
+				13C0E779B930B78800319CDB32BC5C3F /* Pods-EPNaverMapClustering_Tests-acknowledgements.plist */,
+				92962C3CB918BE53C7CB24BA1724A361 /* Pods-EPNaverMapClustering_Tests-dummy.m */,
+				86679475449C1E4C140C080F6A3B5730 /* Pods-EPNaverMapClustering_Tests-Info.plist */,
+				4B7AE4992EFA14CE97D39382983F5A89 /* Pods-EPNaverMapClustering_Tests-umbrella.h */,
+				3BBDC37EDFF07D1AA5770570A310232B /* Pods-EPNaverMapClustering_Tests.debug.xcconfig */,
+				310A91FFAE75583544884645AA0DAFCF /* Pods-EPNaverMapClustering_Tests.release.xcconfig */,
+			);
+			name = "Pods-EPNaverMapClustering_Tests";
+			path = "Target Support Files/Pods-EPNaverMapClustering_Tests";
+			sourceTree = "<group>";
+		};
+		7453819D9A6489588C2ABC2D5CB7E00F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF8BF73696582E25F2DD30F77D28C224 /* NMapsMap */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		890ACB7DF980CA4EE077865310E2C911 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4D0A5132AB5446B348801AEC4F139 /* Pods-EPNaverMapClustering_Example */,
+				5041E2715C1F8671BB01BD3AA6AB70D3 /* Pods-EPNaverMapClustering_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		90F578AFFF9CDAD31F87F153F3D89AEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36009F137528CA76FE87745CDD5ADB3C /* NMapsMap.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NMapsMap";
+			sourceTree = "<group>";
+		};
+		99597B4F25B1ABABB31260255C775D55 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2109F870A0EB757C0EF01197881E2606 /* EPNaverMapClustering */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AE1AD4330775F8D88FB5D0D7E4F3F816 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CCC8AF6EDB79E4F7FA939E7A8B445BF3 /* EPNaverMapClustering.podspec */,
+				3793C46506CE6313AFB98C4EAE621F16 /* LICENSE */,
+				06AED9C8B4E4B7546AB09FFC56C0AE8D /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		AF8BF73696582E25F2DD30F77D28C224 /* NMapsMap */ = {
+			isa = PBXGroup;
+			children = (
+				CE6622F1D97B5795175FE230C9436E5A /* Frameworks */,
+				90F578AFFF9CDAD31F87F153F3D89AEC /* Support Files */,
+			);
+			name = NMapsMap;
+			path = NMapsMap;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CE6622F1D97B5795175FE230C9436E5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DCAF7FC2C8C3B7E43A7B2290E7B183A /* NMapsMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				99597B4F25B1ABABB31260255C775D55 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7453819D9A6489588C2ABC2D5CB7E00F /* Pods */,
+				DF3E185D0B44F3C7CC97DB66F238E191 /* Products */,
+				890ACB7DF980CA4EE077865310E2C911 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF3E185D0B44F3C7CC97DB66F238E191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97F1FA8A7E33725FBE62B0FA22909B61 /* EPNaverMapClustering.framework */,
+				49B947ADBD15FFC24C40ED5611F37FAF /* Pods_EPNaverMapClustering_Example.framework */,
+				349E1CF94FBD3F4C45E923D9F5EF6856 /* Pods_EPNaverMapClustering_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE4D0A5132AB5446B348801AEC4F139 /* Pods-EPNaverMapClustering_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2D7ECEC9507DB3BD357795E798F01B7B /* Pods-EPNaverMapClustering_Example.modulemap */,
+				4C0A65895230EACDF2637912862040BE /* Pods-EPNaverMapClustering_Example-acknowledgements.markdown */,
+				07A8E7CCC9E5CC6E14FDC98660F7200A /* Pods-EPNaverMapClustering_Example-acknowledgements.plist */,
+				7D49091BA8D77AA12C6433F1DF2473AD /* Pods-EPNaverMapClustering_Example-dummy.m */,
+				EFB53D5853A271FA7E1CA6C8539CEC02 /* Pods-EPNaverMapClustering_Example-frameworks.sh */,
+				1C2ADFB556AF73A96497C9E28C974EF8 /* Pods-EPNaverMapClustering_Example-Info.plist */,
+				A6B022E8F2FCE1440ACF753300A8B542 /* Pods-EPNaverMapClustering_Example-umbrella.h */,
+				E4FA6ED1D124B24AFA2E020EA18DFA04 /* Pods-EPNaverMapClustering_Example.debug.xcconfig */,
+				088CA4826D8843565437DD4A8DAEA2FF /* Pods-EPNaverMapClustering_Example.release.xcconfig */,
+			);
+			name = "Pods-EPNaverMapClustering_Example";
+			path = "Target Support Files/Pods-EPNaverMapClustering_Example";
+			sourceTree = "<group>";
+		};
+		F453B11083BFE07B8DCDFC83FE4C80E9 /* QuadTree */ = {
+			isa = PBXGroup;
+			children = (
+				AFA25D7C2C48F5FD12196979ACB59097 /* MarkerDelegate.swift */,
+				31BDA90CFF0005E9470F516E758DCA69 /* QuadTree.swift */,
+				CC0FF52801323CBB3B22FED2A173FDE8 /* QuadTreeNode.swift */,
+			);
+			name = QuadTree;
+			path = EPNaverMapClustering/Classes/QuadTree;
+			sourceTree = "<group>";
+		};
+		FCC5F73F08D783888CF88A482224E272 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A403508B3ADB60DDFE1FAAC6006394A /* EPNaverMapClustering.modulemap */,
+				3C13ACF6D3CFB2B6DD06B8A11B7C3C88 /* EPNaverMapClustering.xcconfig */,
+				98CF917CC927264E8EC21B7E7894D04B /* EPNaverMapClustering-dummy.m */,
+				501431FE5397613487C3794EDBC22D4B /* EPNaverMapClustering-Info.plist */,
+				25F72C478A8F0153EC511E27EA3E0D17 /* EPNaverMapClustering-prefix.pch */,
+				A4208D8A8E7212C43E85E2F4DBA95FC1 /* EPNaverMapClustering-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EPNaverMapClustering";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37ADAE99FFA5BFAB6D6488B5FD0FDF06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE525C856929D17D54BC1DFA5B26B13F /* Pods-EPNaverMapClustering_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39B5F3494032F9DD7836A42F912AF09B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC737D2F9675DEB2E49D6BE510537E23 /* EPNaverMapClustering-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF19B8FE74CC4B2D71F71BE87A6BA80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0B7DC48E00726B10844976979E22009 /* Pods-EPNaverMapClustering_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05B4C4E3FB590D446FDC45F32ABAFFAA /* Pods-EPNaverMapClustering_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFB1281BA9C31F8D682A52A168D990D4 /* Build configuration list for PBXNativeTarget "Pods-EPNaverMapClustering_Tests" */;
+			buildPhases = (
+				4DF19B8FE74CC4B2D71F71BE87A6BA80 /* Headers */,
+				3B992763C091521A8EB964155C8A1C30 /* Sources */,
+				4CDDC707624B3B37194BA4E2B7CCEB1A /* Frameworks */,
+				B429514288CFDFC7804FFE2B9623DFC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0EADB09739767ACB4261965E130B3C /* PBXTargetDependency */,
+			);
+			name = "Pods-EPNaverMapClustering_Tests";
+			productName = "Pods-EPNaverMapClustering_Tests";
+			productReference = 349E1CF94FBD3F4C45E923D9F5EF6856 /* Pods_EPNaverMapClustering_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B854A8008DE7DD4F671B7F484044514B /* EPNaverMapClustering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81CDBCFFF25EB57589E40AE1A355BFAF /* Build configuration list for PBXNativeTarget "EPNaverMapClustering" */;
+			buildPhases = (
+				39B5F3494032F9DD7836A42F912AF09B /* Headers */,
+				27990A05C1C5DF6AC8D0637F1107EA64 /* Sources */,
+				8066A6FB5151DE43143A03B1DA6E8321 /* Frameworks */,
+				A6FA9A85B172724FF6B83203A2F94AE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEB094C6E77758C198A54DEAA1D66C4E /* PBXTargetDependency */,
+			);
+			name = EPNaverMapClustering;
+			productName = EPNaverMapClustering;
+			productReference = 97F1FA8A7E33725FBE62B0FA22909B61 /* EPNaverMapClustering.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C812D44BA60943132C188E0B0CC88482 /* Pods-EPNaverMapClustering_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61018A3986C88EBB5816157089B1EA1 /* Build configuration list for PBXNativeTarget "Pods-EPNaverMapClustering_Example" */;
+			buildPhases = (
+				37ADAE99FFA5BFAB6D6488B5FD0FDF06 /* Headers */,
+				D786795129DD9CA4AE371508A6F740F6 /* Sources */,
+				451E0AFFD75F13B40DD5C371770CFC99 /* Frameworks */,
+				15281E2D82147EFF4989BC2C7C1CB979 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F92822941DC600E276612CCB99D07012 /* PBXTargetDependency */,
+				F16E549367AF76321535097762AB83FE /* PBXTargetDependency */,
+			);
+			name = "Pods-EPNaverMapClustering_Example";
+			productName = "Pods-EPNaverMapClustering_Example";
+			productReference = 49B947ADBD15FFC24C40ED5611F37FAF /* Pods_EPNaverMapClustering_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DF3E185D0B44F3C7CC97DB66F238E191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B854A8008DE7DD4F671B7F484044514B /* EPNaverMapClustering */,
+				8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */,
+				C812D44BA60943132C188E0B0CC88482 /* Pods-EPNaverMapClustering_Example */,
+				05B4C4E3FB590D446FDC45F32ABAFFAA /* Pods-EPNaverMapClustering_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15281E2D82147EFF4989BC2C7C1CB979 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6FA9A85B172724FF6B83203A2F94AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B429514288CFDFC7804FFE2B9623DFC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27990A05C1C5DF6AC8D0637F1107EA64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD79AB422569C57A886202D211508326 /* EPNaverMapClustering-dummy.m in Sources */,
+				9E6A0B96D6C9D7DE74EEF2601AE4B454 /* MarkerDelegate.swift in Sources */,
+				7904331D4C30145F25FBFE7431CDD0C5 /* QuadTree.swift in Sources */,
+				E84ED41B987501835939AC6239646990 /* QuadTreeNode.swift in Sources */,
+				68DF83D271329868F5995491F546FF2A /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B992763C091521A8EB964155C8A1C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775ED26A3E3DF45E82D6DA653480C061 /* Pods-EPNaverMapClustering_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D786795129DD9CA4AE371508A6F740F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C004B623EAD0DA5F78DCDF5C2F09923F /* Pods-EPNaverMapClustering_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F0EADB09739767ACB4261965E130B3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EPNaverMapClustering_Example";
+			target = C812D44BA60943132C188E0B0CC88482 /* Pods-EPNaverMapClustering_Example */;
+			targetProxy = 554C79698E3F22ABA1A898AE4BEABF4B /* PBXContainerItemProxy */;
+		};
+		EEB094C6E77758C198A54DEAA1D66C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMapsMap;
+			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
+			targetProxy = 30CCBBABF5FD7B4F9FBE593B20C7B3FA /* PBXContainerItemProxy */;
+		};
+		F16E549367AF76321535097762AB83FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMapsMap;
+			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
+			targetProxy = B1457347FDE5BA207C94604251F9111F /* PBXContainerItemProxy */;
+		};
+		F92822941DC600E276612CCB99D07012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EPNaverMapClustering;
+			target = B854A8008DE7DD4F671B7F484044514B /* EPNaverMapClustering */;
+			targetProxy = D7CCD6E03B5DA23B02C067AFD04F2F35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21F819C8D4D20F3AA639F9661881D10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C13ACF6D3CFB2B6DD06B8A11B7C3C88 /* EPNaverMapClustering.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering.modulemap";
+				PRODUCT_MODULE_NAME = EPNaverMapClustering;
+				PRODUCT_NAME = EPNaverMapClustering;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39DF30DDBEBFB898797196713045D493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36009F137528CA76FE87745CDD5ADB3C /* NMapsMap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47FE1167CB38848E2C9F4DEAF0BC2018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088CA4826D8843565437DD4A8DAEA2FF /* Pods-EPNaverMapClustering_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EPNaverMapClustering_Example/Pods-EPNaverMapClustering_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EPNaverMapClustering_Example/Pods-EPNaverMapClustering_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A6331AAF97EB535754C5AE2E7673BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C13ACF6D3CFB2B6DD06B8A11B7C3C88 /* EPNaverMapClustering.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPNaverMapClustering/EPNaverMapClustering.modulemap";
+				PRODUCT_MODULE_NAME = EPNaverMapClustering;
+				PRODUCT_NAME = EPNaverMapClustering;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EAEB077538A5A4596AEDBDFE66F37F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310A91FFAE75583544884645AA0DAFCF /* Pods-EPNaverMapClustering_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EPNaverMapClustering_Tests/Pods-EPNaverMapClustering_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EPNaverMapClustering_Tests/Pods-EPNaverMapClustering_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9AFE6F2AF3F19FF3865DE84884E35E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BBDC37EDFF07D1AA5770570A310232B /* Pods-EPNaverMapClustering_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EPNaverMapClustering_Tests/Pods-EPNaverMapClustering_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EPNaverMapClustering_Tests/Pods-EPNaverMapClustering_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BE5C21E2D793687F0AA7768BB722790B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36009F137528CA76FE87745CDD5ADB3C /* NMapsMap.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD1D2861F008A551AEFBB9DDB51843AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FA6ED1D124B24AFA2E020EA18DFA04 /* Pods-EPNaverMapClustering_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EPNaverMapClustering_Example/Pods-EPNaverMapClustering_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EPNaverMapClustering_Example/Pods-EPNaverMapClustering_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		075089DA4D83E6A425CB6F028FDEEA64 /* Build configuration list for PBXAggregateTarget "NMapsMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5C21E2D793687F0AA7768BB722790B /* Debug */,
+				39DF30DDBEBFB898797196713045D493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81CDBCFFF25EB57589E40AE1A355BFAF /* Build configuration list for PBXNativeTarget "EPNaverMapClustering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A6331AAF97EB535754C5AE2E7673BE5 /* Debug */,
+				21F819C8D4D20F3AA639F9661881D10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFB1281BA9C31F8D682A52A168D990D4 /* Build configuration list for PBXNativeTarget "Pods-EPNaverMapClustering_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AFE6F2AF3F19FF3865DE84884E35E3E /* Debug */,
+				4EAEB077538A5A4596AEDBDFE66F37F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61018A3986C88EBB5816157089B1EA1 /* Build configuration list for PBXNativeTarget "Pods-EPNaverMapClustering_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1D2861F008A551AEFBB9DDB51843AC /* Debug */,
+				47FE1167CB38848E2C9F4DEAF0BC2018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

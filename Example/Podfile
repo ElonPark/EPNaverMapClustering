@@ -2,10 +2,10 @@ use_frameworks!
 
 target 'EPNaverMapClustering_Example' do
   pod 'EPNaverMapClustering', :path => '../'
-
+  pod 'NMapsMap'
+  
   target 'EPNaverMapClustering_Tests' do
     inherit! :search_paths
-
     
   end
 end

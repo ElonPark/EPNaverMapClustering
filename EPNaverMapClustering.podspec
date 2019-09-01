@@ -28,8 +28,8 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Elon/EPNaverMapClustering.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '9.0'
+  s.swift_versions = '5.0'
   s.source_files = 'EPNaverMapClustering/Classes/**/*'
   
   # s.resource_bundles = {
@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'NMapsMap'
 end
