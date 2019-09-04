@@ -5,7 +5,6 @@ PODS:
 
 DEPENDENCIES:
   - EPNaverMapClustering (from `../`)
-  - NMapsMap
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EPNaverMapClustering: 22453a972ba54d1cdba23b4053bf0e3e8e9a869f
+  EPNaverMapClustering: 4e237576bd6a2d4c59918d6e6d25d86cd3b4057d
   NMapsMap: ec883e061245e3636d12640fec4dbb7de5659146
 
-PODFILE CHECKSUM: e4b0c843b02f280c4b47b27a4cb87d8142377bc2
+PODFILE CHECKSUM: b7cf3a83c61385abe970db664982a5f34ae20842
 
 COCOAPODS: 1.7.4

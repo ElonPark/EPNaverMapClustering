@@ -30,11 +30,11 @@ class QuadTreeNode {
 extension QuadTreeNode {
 
     struct Children: Sequence {
-        let northWest: QuadTreeNode
-        let northEast: QuadTreeNode
-        let southWest: QuadTreeNode
-        let southEast: QuadTreeNode
-        
+//        let northWest: QuadTreeNode
+//        let northEast: QuadTreeNode
+//        let southWest: QuadTreeNode
+//        let southEast: QuadTreeNode
+//        
         init(parentNode: QuadTreeNode) {
             let mapRect = parentNode.rect
             
