@@ -32,6 +32,7 @@
 		C9148F9E60828EACA9099133D687DA65 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C41F7366CE5CF69CC646F1E0D5B038 /* ReplaceMe.swift */; };
 		CE525C856929D17D54BC1DFA5B26B13F /* Pods-EPNaverMapClustering_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6B022E8F2FCE1440ACF753300A8B542 /* Pods-EPNaverMapClustering_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0B7DC48E00726B10844976979E22009 /* Pods-EPNaverMapClustering_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B7AE4992EFA14CE97D39382983F5A89 /* Pods-EPNaverMapClustering_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB4B1AAE232A98AE000A7C29 /* Extensions.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4B1AAD232A98AE000A7C29 /* Extensions.swift.swift */; };
 		DF865FDBEEFF2E3DD631A8A122BAD3C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		EB7762D447CEF4B651FC4C641224C8C7 /* QuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69CCC9995C9DCEAA8C4E5D4F4EEB8FC /* QuadTree.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		C7CE301880EB9756E1B3B5058E6DFC68 /* EPNaverMapClustering.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPNaverMapClustering.xcconfig; sourceTree = "<group>"; };
 		D4B797D5CEE76C9CD4F8A1883E9BE1F9 /* EPNaverMapClustering-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPNaverMapClustering-dummy.m"; sourceTree = "<group>"; };
 		D4DC34EC570EB6B2B53DB1736BE5685E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DB4B1AAD232A98AE000A7C29 /* Extensions.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift.swift; path = EPNaverMapClustering/Classes/Extensions.swift.swift; sourceTree = "<group>"; };
 		E4FA6ED1D124B24AFA2E020EA18DFA04 /* Pods-EPNaverMapClustering_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPNaverMapClustering_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB53D5853A271FA7E1CA6C8539CEC02 /* Pods-EPNaverMapClustering_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPNaverMapClustering_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F0E72CE1DF303E81DC19CC4831F7580B /* Pods-EPNaverMapClustering_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPNaverMapClustering_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				94169FE7DCCC01492D2F6E9432879DBA /* QuadTree */,
 				C19D3D494D1A89EA60934B1269249248 /* Pod */,
 				DAB7472D8E5D964056DD1C4E65EC22CE /* Support Files */,
+				DB4B1AAD232A98AE000A7C29 /* Extensions.swift.swift */,
 			);
 			name = EPNaverMapClustering;
 			path = ../..;
@@ -473,6 +476,7 @@
 				C2C542FE00951B4F2F5A792AA70DAF97 /* EPNaverMapClustering-dummy.m in Sources */,
 				2736086EEA2211AF8EE5E51F8EDAE5E2 /* MarkerDelegate.swift in Sources */,
 				EB7762D447CEF4B651FC4C641224C8C7 /* QuadTree.swift in Sources */,
+				DB4B1AAE232A98AE000A7C29 /* Extensions.swift.swift in Sources */,
 				B0157BFC7AA04A430AEA3FC24FAD3E2B /* QuadTreeNode.swift in Sources */,
 				C9148F9E60828EACA9099133D687DA65 /* ReplaceMe.swift in Sources */,
 			);

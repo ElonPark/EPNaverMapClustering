@@ -142,9 +142,13 @@ open class ClusterManager {
             visibleMarkers.reduce([NMFMarker](), { $0 + (($1 as? ClusterMarker)?.markers ?? [$1]) })
         }
     }
-    
+
     let operationQueue = OperationQueue.serial
-    let dispatchQueue = DispatchQueue(label: "com.cluster.concurrentQueue", attributes: .concurrent)
+    let dispatchQueue = DispatchQueue(label: "com.elonparks.concurrentQueue", attributes: .concurrent)
+    
+    public var projection: NMFProjection {
+        return self.mapView.projection
+    }
     
     open weak var delegate: ClusterManagerDelegate?
     
@@ -226,7 +230,7 @@ open class ClusterManager {
      - visibleMapRect: The area currently displayed by the map view.
      */
     @available(swift, obsoleted: 5.0, message: "Use reload(mapView:)")
-    open func reload(_ mapView: NMFMapView, visibleMapRect: NMGLatLngBounds) {
+    open func reload(_ mapView: NMFMapView, visibleMapRect: CGRect) {
         reload(mapView: mapView)
     }
     
@@ -242,11 +246,17 @@ open class ClusterManager {
         let visibleMapRect = mapView.projection.viewBounds(from: mapView.contentBounds)
         let visibleMapRectWidth = visibleMapRect.size.width
         let zoomScale = Double(mapBounds.width) / Double(visibleMapRectWidth)
+        
         operationQueue.cancelAllOperations()
         operationQueue.addBlockOperation { [weak self, weak mapView] operation in
             guard let self = self, let mapView = mapView else { return completion(false) }
             autoreleasepool {
-                let (toAdd, toRemove) = self.clusteredMarkers(zoomScale: zoomScale, visibleMapRect: visibleMapRect, operation: operation)
+                let (toAdd, toRemove) = self.clusteredMarkers(
+                    zoomScale: zoomScale,
+                    visibleMapRect: mapView.contentBounds,
+                    operation: operation
+                )
+                
                 DispatchQueue.main.async { [weak self, weak mapView] in
                     guard let self = self, let mapView = mapView else { return completion(false) }
                     self.display(mapView: mapView, toAdd: toAdd, toRemove: toRemove)
@@ -261,7 +271,10 @@ open class ClusterManager {
         
         guard !isCancelled else { return (toAdd: [], toRemove: []) }
         
-        let mapRects = self.mapRects(zoomScale: zoomScale, visibleMapRect: visibleMapRect)
+        let mapRects = self.mapRects(
+            zoomScale: zoomScale,
+            visibleMapRect: projection.viewBounds(from: visibleMapRect)
+        )
         
         guard !isCancelled else { return (toAdd: [], toRemove: []) }
         
@@ -283,7 +296,7 @@ open class ClusterManager {
         let toAdd = after.subtracted(before)
         
         if !shouldRemoveInvisibleMarkers {
-            let toKeep = toRemove.filter { !visibleMapRect.contains($0.coordinate) }
+            let toKeep = toRemove.filter { !visibleMapRect.contains($0.position) }
             toRemove.subtract(toKeep)
         }
         
@@ -328,6 +341,7 @@ open class ClusterManager {
         let markers = dispatchQueue.sync {
             tree.markers(in: mapRect)
         }
+        
         let hash = Dictionary(grouping: markers) { $0.position }
         dispatchQueue.async(flags: .barrier) {
             for value in hash.values where value.count > 1 {
@@ -335,58 +349,82 @@ open class ClusterManager {
                     tree.remove(marker)
                     let radiansBetweenMarkers = (.pi * 2) / Double(value.count)
                     let bearing = radiansBetweenMarkers * Double(index)
-                    (marker as? MKPointMarker)?.coordinate = marker.coordinate.coordinate(onBearingInRadians: bearing, atDistanceInMeters: self.distanceFromContestedLocation)
+                    (marker as? MKPointMarker)?.coordinate = marker.coordinate.coordinate(
+                        onBearingInRadians: bearing,
+                        atDistanceInMeters: self.distanceFromContestedLocation
+                    )
                     tree.add(marker)
                 }
             }
         }
     }
     
-    func coordinate(markers: [NMFMarker], position: ClusterPosition, mapRect: NMGLatLngBounds) -> CLLocationCoordinate2D {
+    func coordinate(markers: [NMFMarker], position: ClusterPosition, mapRect: CGRect) -> NMGLatLng {
         switch position {
         case .center:
-            return MKMapPoint(x: mapRect.midX, y: mapRect.midY).coordinate
+            return projection.latlng(from: CGPoint(x: mapRect.midX, y: mapRect.midY))
         case .nearCenter:
-            let coordinate = MKMapPoint(x: mapRect.midX, y: mapRect.midY).coordinate
-            let marker = markers.min { coordinate.distance(from: $0.coordinate) < coordinate.distance(from: $1.coordinate) }
-            return marker!.coordinate
+            let position = projection.latlng(from: CGPoint(x: mapRect.midX, y: mapRect.midY))
+            let marker = markers.min { position.distance(to: $0.position) < position.distance(to: $1.position) }
+            return marker!.position
+            
         case .average:
-            let coordinates = markers.map { $0.coordinate }
-            let totals = coordinates.reduce((latitude: 0.0, longitude: 0.0)) { ($0.latitude + $1.latitude, $0.longitude + $1.longitude) }
-            return CLLocationCoordinate2D(latitude: totals.latitude / Double(coordinates.count), longitude: totals.longitude / Double(coordinates.count))
+            let coordinates = markers.map {
+                CLLocationCoordinate2D(latitude: $0.position.lat, longitude: $0.position.lng)
+            }
+            let totals = coordinates.reduce((latitude: 0.0, longitude: 0.0)) {
+                ($0.latitude + $1.latitude, $0.longitude + $1.longitude)
+            }
+            let latitude = totals.latitude / Double(coordinates.count)
+            let longitude = totals.longitude / Double(coordinates.count)
+            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            return NMGLatLng(from: coordinate)
+            
         case .first:
-            return markers.first!.coordinate
+            return markers.first!.position
         }
     }
     
-    func mapRects(zoomScale: Double, visibleMapRect: NMGLatLngBounds) -> [NMGLatLngBounds] {
+    func mapRects(zoomScale: Double, visibleMapRect: CGRect) -> [NMGLatLngBounds] {
         guard !zoomScale.isInfinite, !zoomScale.isNaN else { return [] }
         
         zoomLevel = zoomScale.zoomLevel
-        let scaleFactor = zoomScale / cellSize(for: zoomLevel)
+        let scaleFactor = CGFloat(zoomScale / cellSize(for: zoomLevel))
         
         let minX = Int(floor(visibleMapRect.minX * scaleFactor))
         let maxX = Int(floor(visibleMapRect.maxX * scaleFactor))
         let minY = Int(floor(visibleMapRect.minY * scaleFactor))
         let maxY = Int(floor(visibleMapRect.maxY * scaleFactor))
         
+        let maxPoint = NMGPoint(x: CLLocationCoordinate2DMax.latitude,
+                                y: CLLocationCoordinate2DMax.longitude)
+        
         var mapRects = [NMGLatLngBounds]()
         for x in minX...maxX {
             for y in minY...maxY {
-                var mapRect = NMGLatLngBounds(x: Double(x) / scaleFactor, y: Double(y) / scaleFactor, width: 1 / scaleFactor, height: 1 / scaleFactor)
-                if mapRect.origin.x > MKMapPointMax.x {
-                    mapRect.origin.x -= MKMapPointMax.x
+                var mapRect = CGRect(
+                    x: CGFloat(x) / scaleFactor,
+                    y: CGFloat(y) / scaleFactor,
+                    width: 1 / scaleFactor,
+                    height: 1 / scaleFactor
+                )
+                
+                if mapRect.origin.x > CGFloat(maxPoint.x) {
+                    mapRect.origin.x -= CGFloat(maxPoint.x)
                 }
-                mapRects.append(mapRect)
+                
+                let latlngBounds = projection.latlngBounds(fromViewBounds: mapRect)
+                mapRects.append(latlngBounds)
             }
         }
+        
         return mapRects
     }
     
     open func display(mapView: NMFMapView, toAdd: [NMFMarker], toRemove: [NMFMarker]) {
         assert(Thread.isMainThread, "This function must be called from the main thread.")
-        mapView.removeMarkers(toRemove)
-        mapView.addMarkers(toAdd)
+        toRemove.forEach { $0.mapView = nil }
+        toAdd.forEach { $0.mapView = mapView }
     }
     
     func cellSize(for zoomLevel: Double) -> Double {
