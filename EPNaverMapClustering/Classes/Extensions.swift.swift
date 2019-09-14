@@ -9,39 +9,11 @@ import Foundation
 import MapKit
 import NMapsMap
 
+private let radiusOfEarth: Double = 6372797.6
 
-extension MKMapRect {
+extension CGRect {
     init(minX: Double, minY: Double, maxX: Double, maxY: Double) {
         self.init(x: minX, y: minY, width: abs(maxX - minX), height: abs(maxY - minY))
-    }
-    init(x: Double, y: Double, width: Double, height: Double) {
-        self.init(origin: MKMapPoint(x: x, y: y), size: MKMapSize(width: width, height: height))
-    }
-    func contains(_ coordinate: CLLocationCoordinate2D) -> Bool {
-        return self.contains(MKMapPoint(coordinate))
-    }
-}
-
-extension MKPolyline {
-    convenience init(mapRect: MKMapRect) {
-        let points = [
-            MKMapPoint(x: mapRect.minX, y: mapRect.minY),
-            MKMapPoint(x: mapRect.maxX, y: mapRect.minY),
-            MKMapPoint(x: mapRect.maxX, y: mapRect.maxY),
-            MKMapPoint(x: mapRect.minX, y: mapRect.maxY),
-            MKMapPoint(x: mapRect.minX, y: mapRect.minY)
-        ]
-        self.init(points: points, count: points.count)
-    }
-}
-
-let CLLocationCoordinate2DMax = CLLocationCoordinate2D(latitude: 90, longitude: 180)
-let MKMapPointMax = MKMapPoint(CLLocationCoordinate2DMax)
-
-extension CLLocationCoordinate2D: Hashable {
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(latitude)
-        hasher.combine(longitude)
     }
 }
 
@@ -53,7 +25,14 @@ extension Double {
     }
 }
 
-private let radiusOfEarth: Double = 6372797.6
+let CLLocationCoordinate2DMax = CLLocationCoordinate2D(latitude: 90, longitude: 180)
+
+extension CLLocationCoordinate2D: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(latitude)
+        hasher.combine(longitude)
+    }
+}
 
 extension CLLocationCoordinate2D: Equatable {
     

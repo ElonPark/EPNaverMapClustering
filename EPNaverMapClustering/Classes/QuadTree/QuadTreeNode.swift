@@ -17,12 +17,14 @@ class QuadTreeNode {
     
     var annotations = [NMFMarker]()
     let rect: NMGLatLngBounds
+    let projection: NMFProjection
     var type: NodeType = .leaf
     
     static let maxPointCapacity = 8
     
-    init(rect: NMGLatLngBounds) {
+    init(rect: NMGLatLngBounds, projection: NMFProjection) {
         self.rect = rect
+        self.projection = projection
     }
     
 }
@@ -30,45 +32,48 @@ class QuadTreeNode {
 extension QuadTreeNode {
 
     struct Children: Sequence {
-//        let northWest: QuadTreeNode
-//        let northEast: QuadTreeNode
-//        let southWest: QuadTreeNode
-//        let southEast: QuadTreeNode
-//        
+        let northWest: QuadTreeNode
+        let northEast: QuadTreeNode
+        let southWest: QuadTreeNode
+        let southEast: QuadTreeNode
+
         init(parentNode: QuadTreeNode) {
-            let mapRect = parentNode.rect
+            let projection = parentNode.projection
+            let mapRect = projection.viewBounds(from: parentNode.rect)
             
+            let nwRect = projection.latlngBounds(fromViewBounds:
+                CGRect(
+                    minX: Double(mapRect.minX),
+                    minY: Double(mapRect.minY),
+                    maxX: Double(mapRect.midX),
+                    maxY: Double(mapRect.midY))
+            )
             
-//            NMGLatLngBounds(southWest: <#T##NMGLatLng#>, northEast: <#T##NMGLatLng#>)
-//
-//            mapRect.northEast
-//            mapRect.southWest.lat
-//            mapRect.center.lng
-//
-//            northWest = QuadTreeNode(rect: MKMapRect(minX: mapRect.minX,
-//                                                     minY: mapRect.minY,
-//
-//                                                     maxX: mapRect.midX,
-//                                                     maxY: mapRect.midY)
-//            )
-//            northEast = QuadTreeNode(rect: MKMapRect(minX: mapRect.midX,
-//                                                     minY: mapRect.minY,
-//
-//                                                     maxX: mapRect.maxX,
-//                                                     maxY: mapRect.midY)
-//            )
-//            southWest = QuadTreeNode(rect: MKMapRect(minX: mapRect.minX,
-//                                                     minY: mapRect.midY,
-//
-//                                                     maxX: mapRect.midX,
-//                                                     maxY: mapRect.maxY)
-//            )
-//            southEast = QuadTreeNode(rect: MKMapRect(minX: mapRect.midX,
-//                                                     minY: mapRect.midY,
-//
-//                                                     maxX: mapRect.maxX,
-//                                                     maxY: mapRect.maxY)
-//            )
+            let neRect = projection.latlngBounds(fromViewBounds:
+                CGRect(minX: Double(mapRect.midX),
+                       minY: Double(mapRect.minY),
+                       maxX: Double(mapRect.maxX),
+                       maxY: Double(mapRect.midY))
+            )
+            
+            let swRect = projection.latlngBounds(fromViewBounds:
+                CGRect(minX: Double(mapRect.minX),
+                       minY: Double(mapRect.midY),
+                       maxX: Double(mapRect.midX),
+                       maxY: Double(mapRect.maxY))
+            )
+            
+            let seRect = projection.latlngBounds(fromViewBounds:
+                CGRect(minX: Double(mapRect.midX),
+                       minY: Double(mapRect.midY),
+                       maxX: Double(mapRect.maxX),
+                       maxY: Double(mapRect.maxY))
+            )
+            
+            northWest = QuadTreeNode(rect: nwRect, projection: projection)
+            northEast = QuadTreeNode(rect: neRect, projection: projection)
+            southWest = QuadTreeNode(rect: swRect, projection: projection)
+            southEast = QuadTreeNode(rect: seRect, projection: projection)
         }
         
         struct ChildrenIterator: IteratorProtocol {

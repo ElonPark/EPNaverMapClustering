@@ -11,9 +11,11 @@ import NMapsMap
 public class QuadTree: MarkerDelegate {
     
     let root: QuadTreeNode
+    let projection: NMFProjection
     
-    public init(rect: NMGLatLngBounds) {
-        self.root = QuadTreeNode(rect: rect)
+    public init(rect: NMGLatLngBounds, projection: NMFProjection) {
+        self.root = QuadTreeNode(rect: rect, projection: projection)
+        self.projection = projection
     }
     
     @discardableResult
